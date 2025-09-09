@@ -18,6 +18,24 @@
             padding: 1rem;
         }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+a:focus, button:focus {
+  outline: 3px solid #ff6600;
+  outline-offset: 3px;
+}
+
         nav {
             border: 2PX SOLID BLACK;
             display: flex;
@@ -109,8 +127,8 @@
 </head>
 
 <body>
-
-    <header>
+ <a href="#contenido-principal" class="skip-link">Saltar</a>
+    <header aria-label="Menu principal">
         <nav>
             <a href="#" class="logo">MANACO</a>
             <ul>
@@ -121,38 +139,41 @@
         </nav>
     </header>
 
-    <main>
-        <section class="banner">
-            <p>Calzado que impulsa tu paso</p>
+    <main id="contenido-principal">
+        <section class="banner" aria-labelledby="mensaje-banner">
+            <H1 id="mensaje-banner">Calzado que impulsa tu paso</H1>
         </section>
 
-        <section class="productos">
-            <h2>Productos</h2>
+        <section class="productos" aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Productos</h2>
             <section class="tarjetas">
                 <article>
                     <figure>
-                        <img src="https://via.placeholder.com/200x150" alt="Zapato 1">
-                        <figcaption>Zapato Deportivo</figcaption>
-                    </figure>
-                    <p>$45</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article>
-                    <figure>
-                        <img src="https://via.placeholder.com/200x150" alt="Zapato 2">
-                        <figcaption>Zapato Casual</figcaption>
-                    </figure>
-                    <p>$55</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article>
-                    <figure>
-                        <img src="https://via.placeholder.com/200x150" alt="Zapato 3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsawZHxhAHg-5CA2iPKo92jkrXqV6TeHCPvQ&s" 
+                        alt="Zapato elegante color negro son suela negra costurada">
                         <figcaption>Zapato Elegante</figcaption>
                     </figure>
-                    <p>$70</p>
+                    <p>Bs. 249</p>
+                    <button>Comprar</button>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcDH3v9bBQoUYvtCMqW1EuinhJSTLyd4sukTzNYdim-iLNzPDr0cjH9DhWsY3bwLoZ3b8&usqp=CAU" 
+                        alt="Zapato Para el confort de tus pies, en estilo botin café">
+                        <figcaption>Easy Confort</figcaption>
+                    </figure>
+                    <p>Bs. 359</p>
+                    <button>Comprar</button>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJVoq_Dp4um1faX4jC_cbkilSDCcBKKSBKSA&s" 
+                        alt="Botin de cuero color café para proteger del frío y de cualquier eventualidad">
+                        <figcaption>Botines de cuero</figcaption>
+                    </figure>
+                    <p>Bs. 299</p>
                     <button>Comprar</button>
                 </article>
             </section>
