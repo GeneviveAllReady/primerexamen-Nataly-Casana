@@ -1,0 +1,264 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav,
+        main,
+        footer {
+            padding: 1rem;
+        }
+
+        main {
+            border-left: 1PX SOLID BLACK;
+            border-right: 1PX SOLID BLACK;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        a:focus,
+        button:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 3px;
+        }
+
+        nav {
+            border: 2PX SOLID BLACK;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ff0000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            /* espacio entre enlaces */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Botón hamburguesa visible en móvil */
+        .hamburguesa {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Menú oculto en móviles */
+        .menu {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .menu li {
+            margin: 0.5rem 0;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu.activo {
+            display: flex;
+        }
+
+        .banner {
+            border: 2PX SOLID BLACK;
+            background-color: #e0e0e0;
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 1.5rem;
+        }
+
+        section.productos {
+            text-align: LEFT;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        section.productos h2 {
+            margin-bottom: 2rem;
+        }
+
+        .tarjetas {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .tarjeta {
+            display: flex;
+            gap: 1rem;
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid black;
+            width: 90%;
+            
+        }
+
+        .tarjeta:hover {
+            transform: scale(1.02);
+        }
+
+        .tarjeta img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        .tarjeta h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .tarjeta p {
+            margin: 0.5rem 0;
+            font-weight: bold;
+            color: #9c9898;
+        }
+
+        .tarjeta button {
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .tarjeta button:hover {
+            background: #4d4747;
+        }
+
+
+        article {
+            border-radius: 10px;
+            padding: 1rem;
+            width: 220px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        article img {
+            max-width: 100%;
+            min-width: 180PX;
+            min-HEIGHT: 180PX;
+            border: 1px solid #000000;
+        }
+
+        article button {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #cecece;
+            color: rgb(5, 5, 5);
+            border-radius: 5px;
+            BORDER: 1PX SOLID BLACK;
+            cursor: pointer;
+        }
+
+        footer {
+            bottom: 0;
+            BORDER: 1PX SOLID BLACK;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 1rem;
+        }
+
+        /* ====== Media Query: escritorio desde 600px ====== */
+        @media (min-width: 600px) {
+
+            /* Mostrar banner solo en escritorio */
+            .banner {
+                display: block;
+                background-color: #e0e0e0;
+                text-align: center;
+                padding: 3rem 1rem;
+                font-size: 1.5rem;
+            }
+
+            /* Productos: 3 tarjetas en fila */
+            .tarjetas {
+                flex-direction: row;
+                justify-content: center;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            article {
+                width: 220px;
+            }
+
+            .hamburguesa {
+                display: none;
+                /* se oculta */
+            }
+
+            .menu {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                gap: 1.5rem;
+                background: none;
+                padding: 0;
+            }
+
+            .menu li {
+                margin: 0;
+            }
+
+            .tarjeta {
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                border: 1px solid black;
+            }
+
+            .tarjeta img {
+                width: 50%;
+                height: auto;
+            }
+            .footer{
+                color: blue;
+            }
+        }

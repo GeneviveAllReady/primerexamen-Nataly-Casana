@@ -5,134 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manaco | Calzado que impulsa tu paso</title>
+    
+  <link rel="stylesheet" href="style.css">
     <meta name="description" content="Descubre los zapatos Manaco: deportivos, casuales y elegantes. Calzado de calidad que impulsa tu paso, con estilo, confort y precios accesibles.">
 
     <meta property="og:title" content="Manaco | Calzado que impulsa tu paso">
   <meta property="og:description" content="Zapatos deportivos, casuales y elegantes. Confort y estilo en cada paso con Manaco.">
   <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYvzNbEYwnRtP4EuH8vznuuRLX-hhugYcdEg&s">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav,
-        main,
-        footer {
-            padding: 1rem;
-        }
-main{
-        border-left: 1PX SOLID BLACK;
-        border-right: 1PX SOLID BLACK;
-}
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 100;
-}
-.skip-link:focus {
-  top: 0;
-}
-
-a:focus, button:focus {
-  outline: 3px solid #ff6600;
-  outline-offset: 3px;
-}
-
-        nav {
-            border: 2PX SOLID BLACK;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f5f5f5;
-        }
-
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            /* espacio entre enlaces */
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .banner {
-            border: 2PX SOLID BLACK;
-            background-color: #e0e0e0;
-            text-align: center;
-            padding: 3rem 1rem;
-            font-size: 1.5rem;
-        }
-
-        section.productos {
-            text-align: LEFT;
-            padding: 1rem 1rem;
-        }
-
-        section.productos h2 {
-            margin-bottom: 2rem;
-        }
-
-        .tarjetas {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        article {
-            border-radius: 10px;
-            padding: 1rem;
-            width: 220px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        article img {
-            max-width: 100%;
-            min-width: 180PX;
-            min-HEIGHT: 180PX;
-            border: 1px solid #000000;
-        }
-
-        article button {
-            margin-top: 0.5rem;
-            padding: 0.5rem 1rem;
-            background-color: #cecece;
-            color: rgb(5, 5, 5);
-            border-radius: 5px;
-            BORDER: 1PX SOLID BLACK;
-            cursor: pointer;
-        }
-
-        footer {
-            bottom:0;
-            BORDER: 1PX SOLID BLACK;
-            text-align: center;
-            background-color: #f5f5f5;
-            padding: 1rem;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -140,7 +20,11 @@ a:focus, button:focus {
     <header >
         <nav aria-label="Menu principal">
             <a href="#" class="logo">MANACO</a>
-            <ul>
+            <!-- Botón hamburguesa -->
+            <button class="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+            ☰
+            </button>
+            <ul id="menu-principal" class="menu">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Contacto</a></li>
@@ -156,7 +40,7 @@ a:focus, button:focus {
         <section class="productos" aria-labelledby="titulo-productos">
             <h2 id="titulo-productos">Productos</h2>
             <section class="tarjetas">
-                <article>
+                <article class="tarjeta">
                     <figure>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsawZHxhAHg-5CA2iPKo92jkrXqV6TeHCPvQ&s" 
                         alt="Zapato elegante color negro son suela negra costurada">
@@ -166,7 +50,7 @@ a:focus, button:focus {
                     <button type="button">Comprar</button>
                 </article>
 
-                <article>
+                <article class="tarjeta">
                     <figure>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcDH3v9bBQoUYvtCMqW1EuinhJSTLyd4sukTzNYdim-iLNzPDr0cjH9DhWsY3bwLoZ3b8&usqp=CAU" 
                         alt="Zapato Para el confort de tus pies, en estilo botin café">
@@ -176,7 +60,7 @@ a:focus, button:focus {
                     <button type="button">Comprar</button>
                 </article>
 
-                <article>
+                <article class="tarjeta">
                     <figure>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJVoq_Dp4um1faX4jC_cbkilSDCcBKKSBKSA&s" 
                         alt="Botin de cuero color café para proteger del frío y de cualquier eventualidad">
@@ -189,10 +73,10 @@ a:focus, button:focus {
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 Manaco</p>
     </footer>
-
+<script src="script.js" defer></script>
 </body>
 
 </html>
